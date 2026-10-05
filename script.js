@@ -1,6 +1,4 @@
-const WHATSAPP_URL = "https://wa.me/qr/BH3BXBMGSPUOH1";
-// Номер бизнеса, только цифры с кодом страны, например 77011234567
-const WHATSAPP_PHONE = "";
+const WHATSAPP_PHONE = "77064095513";
 
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
@@ -72,11 +70,7 @@ function copyText(text) {
 
 function openWhatsApp(text) {
   const encoded = encodeURIComponent(text);
-  if (WHATSAPP_PHONE) {
-    window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
-    return;
-  }
-  window.location.href = WHATSAPP_URL;
+  window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
 }
 
 copyOrder.addEventListener("click", () => {
@@ -89,8 +83,6 @@ form.addEventListener("submit", (event) => {
   const payload = Object.fromEntries(new FormData(form).entries());
   const text = buildMessage(payload);
   copyText(text);
-  statusEl.textContent = WHATSAPP_PHONE
-    ? "Открываем WhatsApp с вашей заявкой."
-    : "Текст заявки скопирован. Вставьте его в чат WhatsApp (долгое нажатие → Вставить).";
+  statusEl.textContent = "Открываем WhatsApp с вашей заявкой.";
   openWhatsApp(text);
 });
