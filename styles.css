@@ -763,18 +763,25 @@ textarea {
 
 .wa-float {
   position: fixed;
-  right: 18px;
-  bottom: 18px;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(16px, env(safe-area-inset-bottom));
   z-index: 30;
-  width: 58px;
-  height: 58px;
-  border-radius: 18px;
-  display: grid;
-  place-items: center;
-  background: #128c4a;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #25d366;
   color: #fff;
-  box-shadow: 0 12px 30px rgba(18, 140, 74, 0.4);
-  animation: floaty 3s ease-in-out infinite;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+  line-height: 0;
+}
+
+.wa-float svg {
+  display: block;
+  width: 28px;
+  height: 28px;
 }
 
 .reveal {
@@ -826,9 +833,12 @@ textarea {
   .facts,
   .steps,
   .price-grid,
-  .order-wrap,
   .order-form {
     grid-template-columns: 1fr 1fr;
+  }
+
+  .order-wrap {
+    grid-template-columns: 1fr;
   }
 
   .price-card.featured {
@@ -878,8 +888,17 @@ textarea {
   .facts,
   .steps,
   .price-grid,
+  .order-wrap,
   .order-form {
     grid-template-columns: 1fr;
+  }
+
+  .order-form {
+    padding: 16px;
+  }
+
+  .footer {
+    padding-bottom: 110px;
   }
 
   .occasion {

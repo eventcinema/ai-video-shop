@@ -61,8 +61,7 @@ form.addEventListener("submit", async (event) => {
     /* clipboard may be blocked */
   }
 
-  const url = `${WHATSAPP_URL}?text=${encodeURIComponent(text)}`;
-  window.open(url, "_blank", "noopener");
+  window.location.href = WHATSAPP_URL;
   statusEl.textContent =
-    "Открываем WhatsApp. Текст заявки скопирован — вставьте его в чат, если поле пустое.";
+    "Открываем ваш чат WhatsApp. Текст заявки скопирован — вставьте его в диалог.";
 });
