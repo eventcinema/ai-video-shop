@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Event Cinema — персональные AI-ролики для свадеб, корпоративов, юбилеев и личных историй. Кинематографичные фильмы по вашему сценарию.">
+  <title>Event Cinema — персональные AI-ролики для мероприятий</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,700;1,700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <a class="logo" href="#top">
+      <span class="logo-badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48" fill="none">
+          <rect x="4" y="10" width="40" height="28" rx="6" stroke="currentColor" stroke-width="2.2"/>
+          <circle cx="16" cy="24" r="5.2" stroke="currentColor" stroke-width="2"/>
+          <circle cx="32" cy="24" r="5.2" stroke="currentColor" stroke-width="2"/>
+          <path d="M16 10V6M32 10V6M16 42v-4M32 42v-4" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="logo-text">
+        <b>Event</b>
+        <span>Cinema</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Основное меню">
+      <a class="nav-pill" href="#occasions">Для чего</a>
+      <a class="nav-pill" href="#create">Что создаём</a>
+      <a class="nav-pill" href="#brief">Бриф</a>
+      <a class="nav-pill" href="#pricing">Стоимость</a>
+      <a class="nav-pill nav-cta" href="#order">Заказать</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="nav" aria-label="Открыть меню">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-media" style="background-image:url('assets/hero.jpg')"></div>
+      <div class="hero-veil"></div>
+      <div class="film-edge" aria-hidden="true"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI-фильмы для ваших мероприятий</p>
+          <h1>
+            Event<br>
+            <span class="gold">Cinema</span>
+          </h1>
+          <p class="lead-title">Персональные AI-ролики для мероприятий</p>
+          <p class="lead">Создаём кинематографичные фильмы на основе вашей истории, сценария и идеи мероприятия.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="#order">Заказать ролик</a>
+            <a class="btn btn-ghost" href="#pricing">Смотреть пакеты</a>
+            <a class="btn btn-wa" href="https://wa.me/qr/BH3BXBMGSPUOH1" target="_blank" rel="noopener">Написать в WhatsApp</a>
+          </div>
+        </div>
+        <ul class="hero-tags reveal">
+          <li>Свадьбы</li>
+          <li>Корпоративы</li>
+          <li>Юбилеи</li>
+          <li>Личные истории</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="occasions">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Event Cinema</p>
+          <h2>Для <span class="gold">чего?</span></h2>
+          <p class="section-lead">Истории, которые превращают мероприятие в настоящее кино.</p>
+        </div>
+        <div class="occasion-grid">
+          <article class="occasion reveal" style="background-image:url('assets/occ-meet.jpg')">
+            <div class="occasion-frame" aria-hidden="true"></div>
+            <div class="occasion-body">
+              <span class="chip">01</span>
+              <h3>История знакомства</h3>
+              <p>От первой встречи до сегодняшнего дня.</p>
+            </div>
+          </article>
+          <article class="occasion reveal" style="background-image:url('assets/occ-life.jpg')">
+            <div class="occasion-frame" aria-hidden="true"></div>
+            <div class="occasion-body">
+              <span class="chip">02</span>
+              <h3>История жизни</h3>
+              <p>Детство, семья, достижения и важные моменты.</p>
+            </div>
+          </article>
+          <article class="occasion reveal" style="background-image:url('assets/occ-wedding.jpg')">
+            <div class="occasion-frame" aria-hidden="true"></div>
+            <div class="occasion-body">
+              <span class="chip">03</span>
+              <h3>Свадьбы</h3>
+              <p>Персональный фильм о паре специально для праздника.</p>
+            </div>
+          </article>
+          <article class="occasion reveal" style="background-image:url('assets/occ-corp.jpg')">
+            <div class="occasion-frame" aria-hidden="true"></div>
+            <div class="occasion-body">
+              <span class="chip">04</span>
+              <h3>Корпоративы</h3>
+              <p>История компании, её люди, ценности и атмосфера.</p>
+            </div>
+          </article>
+          <article class="occasion reveal" style="background-image:url('assets/occ-jubilee.jpg')">
+            <div class="occasion-frame" aria-hidden="true"></div>
+            <div class="occasion-body">
+              <span class="chip">05</span>
+              <h3>Юбилеи</h3>
+              <p>История человека, семьи или компании в формате фильма.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="create">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Event Cinema</p>
+          <h2>Что мы <span class="gold">создаём?</span></h2>
+        </div>
+        <div class="facts">
+          <article class="fact-card reveal">
+            <p class="fact-label">AI-ролики</p>
+            <p>От 30 секунд до 5 минут — короткий показ или полноценная киносцена.</p>
+          </article>
+          <article class="fact-card reveal">
+            <p class="fact-label">Любой жанр</p>
+            <p>Реалистичное кино, фантастика, комедия, историческая эпоха или мультфильм.</p>
+          </article>
+          <article class="fact-card reveal">
+            <p class="fact-label">Вы даёте историю</p>
+            <p>Мы превращаем её в визуальный фильм для большого экрана.</p>
+          </article>
+        </div>
+        <div class="genre-row">
+          <figure class="reveal">
+            <img src="assets/genre-real.jpg" alt="Реалистичное кино">
+            <figcaption>Реалистичное кино</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/genre-scifi.jpg" alt="Фантастика">
+            <figcaption>Фантастика</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/genre-comedy.jpg" alt="Комедия">
+            <figcaption>Комедия</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/genre-history.jpg" alt="Историческая эпоха">
+            <figcaption>Историческая эпоха</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img src="assets/genre-toon.jpg" alt="Мультфильм">
+            <figcaption>Мультфильм</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="brief">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Event Cinema</p>
+          <h2>Что нужно <span class="gold">от вас?</span></h2>
+          <p class="section-lead">Три шага — дальше мы создаём фильм.</p>
+        </div>
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-num">1</span>
+            <h3>Бриф</h3>
+            <p>Герои, событие, идея и пожелания. Кто главный, какой тон, для какого зала.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">2</span>
+            <h3>Сюжет</h3>
+            <p>Готовый сценарий или простое описание истории — даже в нескольких фразах.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">3</span>
+            <h3>Материалы</h3>
+            <p>Фото, видео, логотипы, имена и даты. Чем больше деталей, тем точнее кино.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="eyebrow">Event Cinema</p>
+          <h2>Стоимость</h2>
+          <p class="section-lead">Ваша история на большом экране.</p>
+        </div>
+        <div class="price-grid">
+          <article class="price-card reveal">
+            <p class="price-name">Short</p>
+            <p class="price-meta">до 1 мин · быстрый показ</p>
+            <p class="price-value">70 000 ₸</p>
+            <a class="btn btn-ghost" href="#order" data-plan="Short">Выбрать</a>
+          </article>
+          <article class="price-card featured reveal">
+            <span class="badge">Чаще берут</span>
+            <p class="price-name">Story</p>
+            <p class="price-meta">1–2 мин · история с дугой</p>
+            <p class="price-value">90 000 ₸</p>
+            <a class="btn btn-gold" href="#order" data-plan="Story">Выбрать</a>
+          </article>
+          <article class="price-card reveal">
+            <p class="price-name">Cinema</p>
+            <p class="price-meta">2–5 мин · полный фильм</p>
+            <p class="price-value">125 000 ₸</p>
+            <a class="btn btn-ghost" href="#order" data-plan="Cinema">Выбрать</a>
+          </article>
+        </div>
+        <div class="includes reveal">
+          <h3>В стоимость входит</h3>
+          <ul>
+            <li>Сценарная обработка</li>
+            <li>AI-визуал</li>
+            <li>Персонажи и локации</li>
+            <li>Анимация</li>
+            <li>Монтаж</li>
+            <li>Музыка</li>
+            <li>Готовый ролик для показа</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-media" style="background-image:url('assets/cta.jpg')"></div>
+      <div class="container cta-inner reveal">
+        <h2>Вы приносите историю.<br><span class="gold">Мы превращаем её в кино.</span></h2>
+        <p>Ваша история. Ваш сценарий. Ваш фильм.</p>
+        <a class="btn btn-gold" href="https://wa.me/qr/BH3BXBMGSPUOH1" target="_blank" rel="noopener">Написать в WhatsApp</a>
+      </div>
+    </section>
+
+    <section class="section" id="order">
+      <div class="container order-wrap">
+        <div class="reveal">
+          <p class="eyebrow">Заявка</p>
+          <h2>Заказать ролик</h2>
+          <p class="section-lead">Опишите событие — заявка сразу откроется в WhatsApp.</p>
+          <p class="fineprint" id="contactHint">Текст письма копируется и уходит в чат. Если WhatsApp не открылся, вставьте сообщение вручную.</p>
+          <a class="btn btn-wa" href="https://wa.me/qr/BH3BXBMGSPUOH1" target="_blank" rel="noopener">Открыть WhatsApp</a>
+        </div>
+        <form class="order-form reveal" id="orderForm">
+          <label>
+            Имя
+            <input name="name" type="text" required autocomplete="name" placeholder="Как к вам обращаться">
+          </label>
+          <label>
+            Телефон
+            <input name="contact" type="text" required autocomplete="tel" placeholder="+7 7xx xxx xx xx">
+          </label>
+          <label>
+            Тип мероприятия
+            <select name="event" required>
+              <option value="" disabled selected>Выберите</option>
+              <option>Свадьба</option>
+              <option>История знакомства</option>
+              <option>История жизни</option>
+              <option>Корпоратив</option>
+              <option>Юбилей</option>
+              <option>Другое</option>
+            </select>
+          </label>
+          <label>
+            Пакет
+            <select name="plan" id="planSelect">
+              <option>Short — 70 000 ₸</option>
+              <option selected>Story — 90 000 ₸</option>
+              <option>Cinema — 125 000 ₸</option>
+              <option>Пока не знаю</option>
+            </select>
+          </label>
+          <label class="full">
+            История и пожелания
+            <textarea name="story" rows="5" placeholder="Герои, событие, идея, есть ли сценарий и материалы"></textarea>
+          </label>
+          <button class="btn btn-gold full" type="submit">Отправить в WhatsApp</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a class="logo" href="#top">
+        <span class="logo-badge" aria-hidden="true">
+          <svg viewBox="0 0 48 48" fill="none">
+            <rect x="4" y="10" width="40" height="28" rx="6" stroke="currentColor" stroke-width="2.2"/>
+            <circle cx="16" cy="24" r="5.2" stroke="currentColor" stroke-width="2"/>
+            <circle cx="32" cy="24" r="5.2" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </span>
+        <span class="logo-text"><b>Event</b> <span>Cinema</span></span>
+      </a>
+      <p>Персональные AI-ролики для мероприятий</p>
+      <a class="nav-pill nav-wa" href="https://wa.me/qr/BH3BXBMGSPUOH1" target="_blank" rel="noopener">WhatsApp</a>
+      <p class="copy">© <span id="year"></span> Event Cinema</p>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/qr/BH3BXBMGSPUOH1" target="_blank" rel="noopener" aria-label="Написать в WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M20.5 3.5A11 11 0 0 0 2.1 17.7L1 23l5.4-1.1A11 11 0 1 0 20.5 3.5zm-8.5 17a9.1 9.1 0 0 1-4.6-1.3l-.3-.2-3.2.7.7-3.1-.2-.3A9.1 9.1 0 1 1 12 20.5zm5-6.8c-.3-.1-1.6-.8-1.8-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.4.1-.3a1.6 1.6 0 0 0 0-.6 1.3 1.3 0 0 0-.6-.5h-.5c-.2 0-.6.1-.9.5s-1.2 1.1-1.2 2.8 1.2 3.2 1.4 3.4a10.5 10.5 0 0 0 4 2.7c1.6.5 2.2.4 3 .2a2.5 2.5 0 0 0 1.6-1.1 2 2 0 0 0 .1-1.1c-.1-.2-.3-.2-.6-.3z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
