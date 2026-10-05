@@ -1,4 +1,6 @@
 const WHATSAPP_URL = "https://wa.me/qr/BH3BXBMGSPUOH1";
+// Номер бизнеса, только цифры с кодом страны, например 77011234567
+const WHATSAPP_PHONE = "";
 
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
@@ -6,6 +8,9 @@ const form = document.getElementById("orderForm");
 const statusEl = document.getElementById("formStatus");
 const year = document.getElementById("year");
 const header = document.getElementById("header");
+const orderResult = document.getElementById("orderResult");
+const orderMessage = document.getElementById("orderMessage");
+const copyOrder = document.getElementById("copyOrder");
 
 year.textContent = new Date().getFullYear();
 
@@ -50,18 +55,42 @@ function buildMessage(data) {
   ].join("\n");
 }
 
-form.addEventListener("submit", async (event) => {
+function copyText(text) {
+  orderMessage.value = text;
+  orderResult.hidden = false;
+  orderMessage.focus();
+  orderMessage.select();
+  try {
+    document.execCommand("copy");
+  } catch {
+    /* ignore */
+  }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).catch(() => {});
+  }
+}
+
+function openWhatsApp(text) {
+  const encoded = encodeURIComponent(text);
+  if (WHATSAPP_PHONE) {
+    window.location.href = `https://wa.me/${WHATSAPP_PHONE}?text=${encoded}`;
+    return;
+  }
+  window.location.href = WHATSAPP_URL;
+}
+
+copyOrder.addEventListener("click", () => {
+  copyText(orderMessage.value);
+  statusEl.textContent = "Текст снова скопирован.";
+});
+
+form.addEventListener("submit", (event) => {
   event.preventDefault();
   const payload = Object.fromEntries(new FormData(form).entries());
   const text = buildMessage(payload);
-
-  try {
-    await navigator.clipboard.writeText(text);
-  } catch {
-    /* clipboard may be blocked */
-  }
-
-  window.location.href = WHATSAPP_URL;
-  statusEl.textContent =
-    "Открываем ваш чат WhatsApp. Текст заявки скопирован — вставьте его в диалог.";
+  copyText(text);
+  statusEl.textContent = WHATSAPP_PHONE
+    ? "Открываем WhatsApp с вашей заявкой."
+    : "Текст заявки скопирован. Вставьте его в чат WhatsApp (долгое нажатие → Вставить).";
+  openWhatsApp(text);
 });

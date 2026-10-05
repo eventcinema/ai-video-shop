@@ -751,6 +751,24 @@ textarea {
   margin: 16px 0;
 }
 
+.order-result {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+}
+
+.order-result[hidden] {
+  display: none;
+}
+
+.order-result p {
+  color: var(--gold-2);
+}
+
+.order-result textarea {
+  min-height: 160px;
+}
+
 .footer {
   border-top: 1px solid var(--line);
   padding: 28px 0 88px;

@@ -299,6 +299,11 @@
           </label>
           <button class="btn btn-gold full" type="submit">Отправить в WhatsApp</button>
           <p class="form-status" id="formStatus" role="status"></p>
+          <div class="order-result" id="orderResult" hidden>
+            <p>Заявка готова. Текст скопирован — вставьте его в открывшийся чат WhatsApp.</p>
+            <textarea id="orderMessage" rows="8" readonly></textarea>
+            <button class="btn btn-ghost full" type="button" id="copyOrder">Скопировать ещё раз</button>
+          </div>
         </form>
       </div>
     </section>
