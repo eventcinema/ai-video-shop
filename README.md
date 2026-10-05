@@ -7,7 +7,7 @@
 1. Создайте репозиторий `ai-video-shop`.
 2. Загрузите все файлы из этой папки (кроме `_slides`).
 3. Settings → Pages → Deploy from a branch → `main` / корневая папка.
-4. Сайт откроется как `https://ВАШ-ЛОГИН.github.io/ai-video-shop/`.
+Сайт: https://stasshmatd-lang.github.io/ai-video-shop/
 
 ## Заявки
 
